@@ -3,8 +3,7 @@
 ## Technology Used 
 
 |Technology | Resource |
-|-----|:-----------|
-| Git | [https://git-scm.com/](https://git-scm.com/)  
+|-----|:-----------|  
 | JavaScript | [https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
 | HTML |[https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/HTML)|
 |CSS | [https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/CSS)|
