@@ -8,21 +8,7 @@
 | JavaScript | [https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/JavaScript) |
 | HTML |[https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/HTML)|
 |CSS | [https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/CSS)|
-
-## Description
-
-[Click here to view Deployed Site]()
-
-
-
-## Table of Contents
-* [Code Example](#code-example)
-* [Learning Points](#learning-points)
-* [Author Info](#author-info)
-* [Credits](#credits)
-* [License](#license)
-
-
+g
 ## Learning Points
 ### Setting JS Variables
 - For this project it was important to keep track of numerous variables. These variables are used to hold information for our program. We are able to set values such as strings and arrays, which were used to access the information needed to generate our password.
