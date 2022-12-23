@@ -8,6 +8,8 @@
 | HTML |[https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/HTML)|
 |CSS | [https://developer.mozilla.org/](https://developer.mozilla.org/en-US/docs/Web/CSS)|
 
+## Introduction
+For this project I had to create a password generator that would ask for parameters and then generate a string. For my process, I started off with one array that I would split into multiple arrays. Through this project, I was challenged with working with different primitive data types. One challenge that was presented to me was that I could not iterate over a string - so for my solution, I made sure to convert these strings into arrays so that I can use the Math.Random to choose a character for the password.
 
 ## Learning Points
 ### Setting JS Variables
@@ -15,6 +17,8 @@
 
 ### Working Prompt/Confirm/Alert
 - By using the built in Window Objects, we are able to give our user choices and the program able to take in information that it can then use as part of it's parameters. Through the prompt the user is asked what the length used will be for the password. By using the Confirm window object, we are able to then refine the choices and set parameters regarding the characters that are able to be used for the Password. 
+
+### DataTypes String and Arrays
 
 
 ## Author Info
