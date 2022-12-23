@@ -1,42 +1,63 @@
-// Assignment Code
+function getPassLength() {
+  var passwordLength = window.prompt("Choose a password length:\n(8 - 128)", "Input a number between 8-128")
+    if (isNaN(passwordLength)) {
+      window.alert("Invalid input, please choose a whole number between 8-128\n Press cancel to abort.");
+    } else if (passwordLength < 8 || passwordLength > 128) {
+      window.alert("Invalid length, please make sure that the lenght chosen is between 8-128"); getPasslength();
+    } else return passwordLength; 
+}
+  
+function getPassPara() {
+  var includeLower = window.confirm("Include lower case characters?\n Confirm for Yes\n Cancel for No")
+  var includeUpper = window.confirm("Include upper case characters?\n Confirm for Yes\n Cancel for No")
+  var includeSpecial =window.confirm("Include special case characters?\n Confirm for Yes\n Cancel for No")
+  var includeNums = window.confirm("Include number characters?\n Confirm for Yes\n Cancel for No")
+
+  if (includeLower === false && includeUpper === false && includeSpecial === false && includeNums === false) {
+    window.alert("Must include at least 1 criteria"); getPassPara();
+  } else writePassword();
 
 
-/*
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-*/
+  var charaBank = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789!@#$%^&*()"
+  var getLowerChara = charaBank.slice(0, 26)
+  var getUpperChara = charaBank.slice(27, 52)
+  var getNumsChara = charaBank.slice(53, 62)
+  var getSpecialChara = charaBank.slice(63, 73)
+
+  var allowedCharas = "";
+
+  if (includeLower == true) {
+    allowedCharas += getLowerChara;
+  } 
+  if (includeUpper == true) {
+    allowedCharas += ggetUpperChara;
+  } 
+  if (includeNums == true) {
+    allowedCharas += getNumsChara;
+  } 
+  if (includeSpecial == true) {
+    allowedCharas += getSpecialChara;
+  } return allowedCharas;
+}
+
 
 
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
-  var charaBank = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  getPassLength();
+  getPassPara();
 
+  passwordText.value = password;  
+  generatePassword = function() {
+    passwordGen = "";
+    for (var i = 0; i < passwordLength; i++); 
+      passwordGen = allowedCharas.charAt(Math.floor(Math.random() * passwordGen + 1.)) 
+    }
+  }
 
-
-
-  
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+getPassLength();
